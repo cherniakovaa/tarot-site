@@ -1,4 +1,4 @@
-  ### Interaktywna aplikacja webowa do wróżenia z kart Tarota  
+  # Interaktywna aplikacja webowa do wróżenia z kart Tarota  
 
 ---
 
