@@ -38,24 +38,24 @@ Aplikacja zapewnia immersyjne doświadczenie dzięki animacjom, efektom świetln
 
 ## 🃏 Funkcjonalności  
 
-### 🔸 Wybór typu rozkładu  
+### Wybór typu rozkładu  
 - Klasyczny (3 karty: miłość, kariera, przyszłość),  
 - Przeszłość – Teraźniejszość – Przyszłość,  
 - Miłość – Wyzwanie – Rada,  
 - Duchowe przesłanie,  
 - Droga 5 kart.  
 
-### 🔸 Personalizacja  
+### Personalizacja  
 - Wprowadzenie danych użytkownika (imię, data urodzenia),  
 - Automatyczne obliczanie wieku,  
 - Walidacja poprawności danych i wymagalność pól.  
 
-### 🔸 Losowanie kart  
+### Losowanie kart  
 - Interaktywny wybór kart z talii,  
 - Animacje i efekty dźwiękowe,  
 - Dynamiczne dopasowanie kart do energii rozkładu.  
 
-### 🔸 Wynik wróżby  
+### Wynik wróżby  
 - Prezentacja wylosowanych kart wraz z opisami,  
 - Analiza pozytywnej lub negatywnej energii rozkładu,  
 - Możliwość powrotu do menu głównego.  
