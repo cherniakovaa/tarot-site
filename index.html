@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wróżba z kart Tarota</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🔮 Wróżba z kart Tarota</h1>
+    <form>
+      <!-- Krok 1: wybór rozkładu -->
+      <section id="step1" class="step">
+        <h2>Wybierz swój rozkład...</h2>
+        <h3> Przed Tobą karty, które znają odpowiedzi na pytania, których boisz się zadać. Wsłuchaj się w głos intuicji. Poczuj energię, która Cię prowadzi.</h3>
+        <div id="spread-selection">
+          <!-- przyciski generuje JS -->
+        </div>
+
+        <!-- Pojawia się tylko dla Klasycznego -->
+        <div id="classic-options" class="hidden">
+          <h3>Wybierz temat wróżby:</h3>
+          <select id="topic">
+            <option value="">-- wybierz --</option>
+            <option value="milosc">Miłość</option>
+            <option value="kariera">Kariera</option>
+            <option value="przyszlosc">Przyszłość</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="nextStep()">Dalej</button>
+
+        <!-- 💬 Opis w ramce - PRZENIESIONY NIŻEJ -->
+        <div id="description-box" class="description-box hidden">
+          <p id="spread-description" class="spread-description"></p>
+        </div>
+      </section>
+
+      <!-- Krok 2 -->
+      <section id="step2" class="step hidden">
+        <h2>Zanim karty przemówią...</h2>
+        <h2>Magia zaczyna się od Ciebie.</h2>
+        <h3>Podaj swoje imię i datę urodzenia — to klucz do Twojej energii, która prowadzi nas przez rozkład.</h3>
+        <h3>Twoje dane pomogą kartom połączyć się z Twoją aurą, odnaleźć właściwe przesłanie i otworzyć drzwi do głębszego zrozumienia.</h3>
+        <h3><em>🌙 Zaufaj procesowi. Wszechświat już słucha.</em></h3>
+        <h2>Wprowadź swoje dane, a kiedy będziesz gotowy — rozpocznij rytuał.</h2>
+        <input type="text" id="name" placeholder="Imię" required />
+        <input type="text" id="surname" placeholder="Nazwisko" required />
+        <input type="date" id="birthdate" required />
+        <input type="number" id="age" placeholder="Wiek" required />
+        <button type="button" onclick="step3()">Dalej</button>
+
+        <button type="button" class="gray-button" onclick="backToStep1()">Powrót do poprzedniego kroku</button>
+
+
+      </section>
+
+      <!-- Krok 3 -->
+      <section id="step3" class="step hidden">
+        <h2>Zamknij oczy. Wejdź w głąb siebie.</h2>
+        <h3>Karty nie odpowiadają na powierzchowne pytania.</h3>
+        <h3>One słyszą to, co ukryte w ciszy Twojej duszy.</h3>
+        <br>
+        <h2><b>✨ Poczuj, co naprawdę Cię porusza.</b></h2>
+        <h3>Czy to miłość? Strach przed przyszłością? Trudna decyzja?</h3>
+        <h3>To właśnie teraz jest moment, aby zadać pytanie, które ma dla Ciebie prawdziwe znaczenie.</h3>
+        <br>
+        <h2>Zaufaj sobie. Wsłuchaj się w serce.</h2>
+        <h3>Kiedy będziesz gotowy — wypowiedz pytanie w myślach lub zapisz je przed sobą.</h3>
+        <h3>Karty już czekają, by odsłonić prawdę.</h3>
+        <button type="button" onclick="drawCards()">Otwórz się na odpowiedź</button>
+        
+        <button type="button" class="gray-button" onclick="backToStep2()">Powrót do poprzedniego kroku</button>
+
+
+      </section>
+
+      <!-- Wynik -->
+      <section id="deck-zone" class="step hidden">
+        <h2 id="deck-title">Wybierz karty z talii:</h2>
+      
+        <!-- ⬇️ ДОБАВЬ ЭТО -->
+        <div id="card-labels" class="card-labels hidden"></div>
+      
+        <div id="deck-wrapper">
+          <img id="deck-image" src="images/tarot.jpg" alt="Deck" onclick="drawFromDeck()" />
+        </div>
+        <div id="table"></div>
+        <div id="draw-result" class="hidden"></div>
+        <div id="descriptions"></div>
+        <button type="button" id="menu-end-button" class="gray-button hidden" onclick="goToMainMenu()">Powrót do menu głównego</button>
+
+      </section>
+      
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
