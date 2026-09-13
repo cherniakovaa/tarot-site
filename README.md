@@ -1,104 +1,103 @@
-  # Interaktywna aplikacja webowa do wróżenia z kart Tarota  
+# Tarot Reading Website
 
----
+An interactive web application for tarot card readings. The project combines a frontend built with HTML, CSS and JavaScript with a Python Flask backend responsible for card selection and API communication.
 
-## 🧾 Opis projektu  
-To interaktywna aplikacja internetowa umożliwiająca symboliczne wróżenie z kart Tarota.  
-Użytkownik przechodzi przez rytuał losowania kart, który opiera się na intuicji, magii oraz danych osobowych.  
-System łączy frontend w **HTML, CSS i JavaScript** z backendem w **Pythonie (Flask)**, który odpowiada za logikę losowania i interpretację kart.  
+## Project Overview
 
-Aplikacja zapewnia immersyjne doświadczenie dzięki animacjom, efektom świetlnym i dźwiękom losowania.  
+The application allows users to choose a tarot spread, enter basic personal information, and receive a personalized card reading.
 
----
+The interface includes animations, visual effects, and sound effects to create an interactive user experience.
 
-## 🎯 Cel projektu  
-- Umożliwienie użytkownikowi wykonania spersonalizowanej wróżby na podstawie imienia, daty urodzenia i wieku,  
-- Przekazanie symbolicznego przesłania w oparciu o klasyczny Tarot,  
-- Stworzenie atmosfery magii i intuicji poprzez interaktywny i estetyczny interfejs.  
+## Features
 
----
+### Tarot Spreads
 
-## ⚙️ Technologie  
+The application supports several types of readings:
 
-**Frontend:**  
-- HTML5 – struktura aplikacji,  
-- CSS3 – motyw magiczno-kosmiczny, animacje i efekty świetlne,  
-- JavaScript – logika interakcji i komunikacja z API.  
+* Classic three-card spread — Love, Career, Future
+* Past, Present, Future
+* Love, Challenge, Advice
+* Spiritual Message
+* Five-card spread
 
-**Backend:**  
-- Python (Flask) – serwer API,  
-- JSON – struktura danych kart i opisów,  
-- CORS – umożliwienie komunikacji między frontendem i backendem.  
+### User Input and Validation
 
-**Zasoby dodatkowe:**  
-- Folder `images/` – obrazy kart,  
-- Plik `card.mp3` – dźwięk losowania kart.  
+* User name and date of birth input
+* Automatic age calculation
+* Form validation
+* Required field validation
+* Input validation for user data
 
----
+### Card Reading
 
-## 🃏 Funkcjonalności  
+* Interactive card selection
+* Random card drawing
+* Card animations and sound effects
+* Display of selected cards and their descriptions
+* Different interpretations depending on the selected reading type
 
-### Wybór typu rozkładu  
-- Klasyczny (3 karty: miłość, kariera, przyszłość),  
-- Przeszłość – Teraźniejszość – Przyszłość,  
-- Miłość – Wyzwanie – Rada,  
-- Duchowe przesłanie,  
-- Droga 5 kart.  
+## Technologies
 
-### Personalizacja  
-- Wprowadzenie danych użytkownika (imię, data urodzenia),  
-- Automatyczne obliczanie wieku,  
-- Walidacja poprawności danych i wymagalność pól.  
+### Frontend
 
-### Losowanie kart  
-- Interaktywny wybór kart z talii,  
-- Animacje i efekty dźwiękowe,  
-- Dynamiczne dopasowanie kart do energii rozkładu.  
+* HTML5
+* CSS3
+* JavaScript
 
-### Wynik wróżby  
-- Prezentacja wylosowanych kart wraz z opisami,  
-- Analiza pozytywnej lub negatywnej energii rozkładu,  
-- Możliwość powrotu do menu głównego.  
+### Backend
 
----
+* Python
+* Flask
+* JSON
+* CORS
 
-## 🧠 Backend (Flask API)  
-Endpoint `/api/gadanie` przyjmuje dane użytkownika i typ rozkładu, po czym zwraca zestaw losowych kart w formacie JSON.  
-Każda karta zawiera opisy dla różnych kontekstów (np. miłość, kariera, przesłanie) oraz pole `energia`, które określa ogólny ton wróżby.  
+## Backend API
 
----
+The Flask backend provides an API endpoint:
 
-## 🔐 Walidacja danych  
-Zaimplementowano mechanizm sprawdzania poprawności danych użytkownika:  
-- Imię i nazwisko – bez cyfr,  
-- Data urodzenia – automatyczne obliczanie wieku,  
-- Temat wróżby – obowiązkowy przy klasycznym rozkładzie,  
-- Puste pola – blokada przejścia do kolejnego etapu.  
+`/api/gadanie`
 
-W przypadku błędów aplikacja wyświetla komunikaty alert(), zapewniające intuicyjną obsługę.  
+The endpoint receives user information and the selected spread type and returns a set of randomly selected cards in JSON format.
 
----
+Each card contains descriptions for different contexts, such as love, career, and general messages, as well as information about the overall reading.
 
-## 🚀 Uruchomienie projektu  
+## Project Structure
 
-1. Zainstaluj wymagane biblioteki:  
-   ```bash
-   pip install flask
-3. Uruchom serwer backendu:
-   ```bash
-   python app.py
-3. Otwórz plik index.html w przeglądarce.
+```text
+tarot-site/
+├── images/
+├── screenshots/
+├── app.py
+├── card.mp3
+├── index.html
+├── script.js
+├── style.css
+└── README.md
+```
 
----
+## How to Run
 
-## 📸 Zrzuty ekranu
+1. Install Flask:
 
-**Ekran główny**
-![Ekran główny](screenshots/main-screen.png)
+```bash
+pip install flask
+```
 
-**Formularz danych użytkownika**
-![Formularz danych użytkownika](screenshots/form.png)
+2. Start the Flask backend:
 
-**Wyniki wróżby**
-![Wynik wróżby](screenshots/result1.png)
-![Wynik wróżby](screenshots/result2.png)
+```bash
+python app.py
+```
+
+3. Open `index.html` in a browser.
+
+## Project Focus
+
+This project was created to practice:
+
+* Building an interactive web interface
+* Connecting a frontend with a Python backend
+* Working with REST API endpoints
+* Handling JSON data
+* Form validation
+* Creating animations and interactive UI elements
